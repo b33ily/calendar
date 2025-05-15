@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь | hi planner!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="spring"></div>
+        <div class="inner-calendar">
+            <div class="header">
+                <div class="event-inputs">
+                    <input type="text" class="event-input" id="eventName" placeholder="Имя события">
+                    <input type="date" class="event-input" id="eventDate">
+                    <input type="time" class="event-input" id="eventTime" placeholder="Время">
+                    <button class="add-button" id="addButton">+</button>
+                </div>
+                <div class="site-title">hi planner!</div>
+            </div>
+            
+            <div class="weekdays">
+                <div class="day">пн</div>
+                <div class="day">вт</div>
+                <div class="day">ср</div>
+                <div class="day">чт</div>
+                <div class="day">пт</div>
+                <div class="day">сб</div>
+                <div class="day">вс</div>
+            </div>
+            
+            <div class="day-notes" id="calendarDays"></div>
+            
+            <div class="sidebar">
+                <div class="month-year-container">
+                    <button class="arrow" id="prevMonth">←</button>
+                    <div class="month-year">
+                        <div class="current-month" id="currentMonth"></div>
+                        <div class="current-year" id="currentYear"></div>
+                    </div>
+                    <button class="arrow" id="nextMonth">→</button>
+                </div>
+                
+                <div class="input-fields">
+                    <input type="text" class="oval-input" id="eventLocation" placeholder="Место">
+                    <input type="text" class="oval-input" id="eventPeople" placeholder="Участники">
+                </div>
+                
+                <div class="notes">
+                    <div class="notes-title">Общие заметки</div>
+                    <textarea class="oval-input" id="generalNotes" placeholder="Ваши заметки..." rows="3"></textarea>
+                </div>
+            </div>
+        </div>
+        
+        <div class="nav-buttons">
+            <button class="nav-btn" onclick="window.location.href='index.html'">На главную</button>
+            <button class="nav-btn" id="saveButton">Сохранить</button>
+        </div>
+    </div>
+    <script src="calendar.js"></script>
+</body>
+</html>
